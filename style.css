@@ -1,0 +1,90 @@
+#CV-template {
+    display: none;
+     
+    }
+    
+    
+    .heading1{
+        font-size: 3rem;
+        font-weight: bold;
+        color: hotpink
+        
+    }
+    
+    .heading2{
+        font-size: 3rem;
+        font-weight: bold;
+        color: brown;
+        background-size: auto;
+    }
+    .myimg {
+        border: 1px solid;
+        width: 200px;
+        border-radius: 50%;
+        margin-top: 20px;
+    }
+    
+    .background{
+    background-color: lightcoral;
+    }
+    
+    @media print {
+        #hide {
+            display : none;
+        }
+    }
+    
+    .gdp{
+        margin-bottom: 40px;
+        margin-top: 20px
+    }
+    
+    .add1,.add2,.add3{
+        margin: -82px -39em 0em 0em;
+    
+    }
+    body {
+        background-color: skyblue;
+       background-repeat: no-repeat;
+       background-size: cover;
+     }
+     .col{
+       background-image: url("col.png");
+       background-repeat: no-repeat;
+       margin-top: 70px;
+       background-size: cover;
+       box-shadow: 25px 25px 10px #333;
+     }
+     
+     .coll {
+       margin-top: 10%;
+     }
+     .btn-warning1 {
+       height: 50px;
+       width: 250px;
+       font-size: 1.5rem;
+       color: #fff;
+     }
+     .btn-warning1 :hover {
+       transform: scale(1.2);
+       background-color: black;
+       color: red;
+     }
+     h1 {
+       font-size: 4rem;
+     }
+     
+     .c1 {
+       display: flex;
+       color: #fff;
+      font-size: 2.5rem;
+       justify-content: center;
+       text-align: center;
+       align-items: center;
+       height: 80px;
+       background-color: rgb(7, 82, 112);
+       border-radius: 10px;
+     }
+     h3{
+       color:black ;
+     }

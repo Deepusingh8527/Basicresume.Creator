@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <title>Resume Creator</title>
+   
+</head>
+<body>
+  <div class="container" id="cv-form">
+    <h1 class="text-center my-3 heading2">RESUME CREATOR</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+
+        <h3 class="heading1">DETAILS</h3>
+        
+        
+            <span class="form-group">
+            <label for="namefield">Full Name</label>
+            <input type="text" id="namefield" placeholder="Enter First Name" class="form-control" />
+            </span>
+
+    
+        <div class="form-group">
+
+            <label for="contactfield">Contact Number</label>
+            <input type="text" id="contactfield" placeholder="Enter Contact" class="form-control" />
+        
+                <label for="mailfield">Email Address</label>
+                <input type="email" id="mailfield" placeholder="ex: myname@example.com" class="form-control" />
+            
+            </div>
+
+            <div class="form-group mt-2">
+
+            <label for="addressfield">Address</label>
+            <textarea type="text" id="addressfield" placeholder="Address" class="form-control" rows="2"></textarea>
+       
+        </div>
+        
+             <div class="form-group mt-2">
+
+            <label for="">Select Your Profile Picture</label>
+            <input id="imgfield" type="file" class="form-control"/>
+        
+        </div>
+
+        <p class="text-secondary my-3">Important Links</p>
+
+        <div class="form-group mt-5">
+
+            <label for="fbfield">Facebook Link</label>
+            <input type="text" id="fbfield" placeholder="Enter Here" class="form-control"/>
+        
+        </div>
+
+        <div class="form-group mt-5">
+
+            <label for="instafield">Instagram</label>
+            <input type="text" id="instafield" placeholder="Enter Here" class="form-control"/>
+        
+        </div>
+
+        <div class="form-group mt-5">
+
+            <label for="linkedinfield">LinkedIn ID Link</label>
+            <input type="text" id="linkedinfield" placeholder="Enter Here" class="form-control"/>
+        
+        </div>
+
+            </div>
+
+        <div class="col-md-6">
+
+
+            <div class="form-group mt-5">
+
+                <label for="">Objective</label>
+                <textarea id="objectivefield" placeholder="Enter Here" class="form-control wefield" rows="2"></textarea>  
+           
+            </div>
+            <div class="form-group mt-2" id="we">
+
+                <label for="">Experience</label>
+                <input type="text" placeholder="Enter Here" class="form-control weField">
+               
+                <div class="container text-center mt-2" id="weAddButton">
+                    <button onclick="AddNewWEField()" class="btn btn-primary btn-danger add1">Add</button>
+                </div> 
+           
+            </div>
+           
+            <div class="form-group" id="eq">
+
+                <label for="">Acadmic Qualification</label>
+                <input type="text" placeholder="Enter Here" class="form-control eqField">
+               
+                <div class="container text-center mt-2" id="aqAddButton">
+                    <button onclick="AddNewAQField()" class="btn btn-primary btn-warning add2">Add</button>
+                </div>
+               
+            </div>
+
+                <div class="form-group" id="lng">
+
+                <label for="">Language</label>
+                <input type="text" placeholder="Enter Here" class="form-control langfield">
+                <div class="container text-center mt-2" id="Lang">
+                    <button onclick="Language()" class="btn btn-primary btn-info add3">Add</button>
+                </div>
+            
+            </div>
+            
+        </div>
+
+    </div>
+    <div class="container text-center mt-3">
+        <button onclick="generateCV()" class="btn btn-primary btn-success py-3 gdp">Generate Resume</button>
+    </div>
+    
+  </div>
+
+  <div class="container" id="CV-template">
+    
+    <div class="row">
+
+        <div class="col-md-4 background">
+            <div class="text-center background">
+<!--1st coloum-->
+            <img src="https://i.pinimg.com/736x/a8/57/00/a85700f3c614f6313750b9d8196c08f5.jpg" id="imgTemplate" class="img-fluid myimg" />
+        
+            <div class="container">
+                <p id="nameT1">Full Name</p>
+                    <hr/>
+                </div>
+            </div>
+            
+                <div class="col-md-5 text-center background">
+                <h3>Contact</h3>
+                <p id="contactT">Phone</p>
+                <h3>Email</h3>
+                <p id="mailT">Email</p>
+                <h3>Address</h3>
+                <p id="addressT">Address</p>
+                    <div class="text-center">
+                <p>
+                    <a id="fbT" href="" target="_blank">https://www.facebook.com</a>
+                </p>
+                <p>
+                    <a id="instaT"  href="#1" target="_blank">https://www.instagram.com</a>
+                </p>
+                <p>
+                    <a id="LinkedT" href="#1" target="_blank">https://www.LinkedIn.com</a>
+                </p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-8 py-1">
+<!--2nd coloum-->
+            <h1 id="nameT2" class="text-center" style="font-weight: 980">NAME</h1>
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Objective</h3>
+                </div>
+                <div class="card-body">
+                    <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, sit inventore? Minima saepe debitis voluptatibus dolorum quae, modi ex quas necessitatibus soluta voluptas porro corrupti at dolorem, laudantium pariatur accusamus.</p>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Skills</h3>
+                </div>
+                <div class="card-body">
+
+                    <ul id="weT">
+                        <li>
+                            Experience 1
+                        </li>
+                        <li>
+                            Experience 2
+                        </li>
+                        <li>
+                            Experience 3
+                        </li>
+                        <li>
+                            Experience 4
+                        </li>
+                    </ul>
+
+                    </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Acadmic Qualification</h3>
+                </div>
+                <div class="card-body">
+
+                    <ul id="aqT">
+                        <li>
+                            Acadmic 1
+                        </li>
+                        <li>
+                            Acadmic 2
+                        </li>
+                        <li>
+                            Acadmic 3
+                        </li>
+                        <li>
+                            Acadmic 4
+                        </li>
+                    </ul>
+
+                    </div>
+
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Language</h3>
+                </div>
+                <div class="card-body1">
+
+                    <ul id="lgT">
+                        <li>
+                            Language 1
+                        </li>
+                        <li>
+                            Language 2
+                        </li>
+                        <li>
+                            Language 3
+                        </li>
+                        <li>
+                            Language 4
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="container mt-3 text-center py-3">
+                <button onclick="printCV()" id="hide" class="btn btn-primary background">Print Resume</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="JavaScript.js"></script>
+</body>
+</html>
